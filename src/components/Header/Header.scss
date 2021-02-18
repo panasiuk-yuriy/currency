@@ -1,0 +1,19 @@
+.nav {
+  padding: 28px 0;
+  display: flex;
+  justify-content: flex-end;
+
+  &__item {
+    color: #F7F7F7;
+    text-decoration: none;
+    background-color: #FF4A4A;
+  }
+
+  &__item:first-child {
+    margin-right: 36px;
+  }
+
+  &__item--active {
+    background-color: #CE9912;
+  }
+}
