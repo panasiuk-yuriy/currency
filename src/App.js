@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { CalculatorPage } from './pages/CalculatorPage/CalculatorPage';
 import { TextPage } from './pages/TextPage/TextPage';
 import { Header } from './components/Header/Header';
@@ -12,6 +12,9 @@ const App = () => {
       <main className="main">
         <Switch>
           <div className="page">
+            <Route exact path="/">
+              <Redirect to="/calculator" />
+            </Route>
             <Route path="/calculator" exact component={CalculatorPage} />
             <Route path="/text" component={TextPage} />
           </div>
